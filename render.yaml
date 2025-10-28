@@ -1,0 +1,12 @@
+# Render deployment configuration
+# This file tells Render how to build and run the application
+
+# Build command
+npm install && npm run build
+
+# Start command  
+npm start
+
+# Environment
+NODE_ENV=production
+PORT=10000
