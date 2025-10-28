@@ -53,10 +53,10 @@ All documentation and files have been prepared for the Dreamliner Hotel IT team.
 - Configure DNS using `DNS-SETUP.md`
 - Set up SSL certificate
 
-### 3. Domain Configuration
-- Configure `menu.dreamlinerhotel.com` domain
-- Set up CNAME record pointing to server
-- Test all 4 menu routes
+### 3. Application Access
+- Application is live at `https://dreamliner-menu-app.onrender.com`
+- All 4 menu routes are accessible
+- QR codes point to Render deployment
 
 ### 4. QR Code Implementation
 - Use the SVG QR codes provided
@@ -68,22 +68,22 @@ All documentation and files have been prepared for the Dreamliner Hotel IT team.
 The application provides 4 distinct menu experiences:
 
 1. **Zaika Restaurant** (`/`)
-   - URL: `https://menu.dreamlinerhotel.com/`
+   - URL: `https://dreamliner-menu-app.onrender.com/`
    - Original pricing
    - Clean, modern design
 
 2. **Zaika Room Service** (`/zaika-room`)
-   - URL: `https://menu.dreamlinerhotel.com/zaika-room`
+   - URL: `https://dreamliner-menu-app.onrender.com/zaika-room`
    - 17% markup on all prices
    - Same menu as restaurant
 
 3. **Oak Restaurant** (`/oak-restaurant`)
-   - URL: `https://menu.dreamlinerhotel.com/oak-restaurant`
+   - URL: `https://dreamliner-menu-app.onrender.com/oak-restaurant`
    - Dark theme with golden accents
    - Premium restaurant feel
 
 4. **Oak Room Service** (`/oak-room`)
-   - URL: `https://menu.dreamlinerhotel.com/oak-room`
+   - URL: `https://dreamliner-menu-app.onrender.com/oak-room`
    - 17% markup on all prices
    - Same menu as Oak restaurant
 
