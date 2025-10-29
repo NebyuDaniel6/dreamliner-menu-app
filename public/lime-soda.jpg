@@ -4,5 +4,4 @@
   <text x='200' y='140' font-family='Arial, sans-serif' font-size='16' fill='#666' text-anchor='middle' font-weight='bold'>lime soda</text>
   <text x='200' y='165' font-family='Arial, sans-serif' font-size='12' fill='#999' text-anchor='middle'>Photo Coming Soon</text>
   <circle cx='200' cy='210' r='25' fill='none' stroke='#999' stroke-width='2'/>
-  <text x='200' y='217' font-family='Arial, sans-serif' font-size='20' fill='#999' text-anchor='middle'>📷</text>
 </svg>
