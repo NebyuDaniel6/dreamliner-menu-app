@@ -2,14 +2,18 @@ deployment:
   tasks:
     # Ensure environment
     - export NODE_ENV=production
+    - export NEXT_TELEMETRY_DISABLED=1
     - export PATH=/opt/alt/alt-nodejs18/root/usr/bin:/usr/bin:$PATH
+    - export NODE_OPTIONS=--max_old_space_size=1024
+    - export NPM_CONFIG_FUND=false
+    - export NPM_CONFIG_AUDIT=false
 
     # Clean deploy dir (keep tmp for Passenger)
     - cd $DEPLOYPATH && mkdir -p tmp
     - cd $DEPLOYPATH && rm -rf .next .next-standalone public server.js app.js || true
 
     # Install and build in repo workspace
-    - npm ci
+    - npm ci --no-audit --no-fund --prefer-offline || npm install --no-audit --no-fund
     - npm run build
 
     # Publish artifacts to the deployment path (public_html)
