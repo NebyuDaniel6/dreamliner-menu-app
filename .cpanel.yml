@@ -26,8 +26,8 @@ deployment:
     # Create the Node entrypoint (app.js launches Next standalone server)
     - bash -lc 'printf "process.env.PORT=process.env.PORT||\\\"3000\\\";require(\\\"./.next-standalone/server.js\\\");" > $DEPLOYPATH/app.js'
 
-    # Ensure Passenger configuration (.htaccess) is present
-    - bash -lc 'cat > $DEPLOYPATH/.htaccess <<EOF\nPassengerEnabled on\nPassengerNodejs /opt/alt/alt-nodejs18/root/usr/bin/node\nPassengerAppRoot $DEPLOYPATH\nPassengerStartupFile server.js\nPassengerAppEnv production\nEOF'
+    # Ensure LiteSpeed/Passenger configuration (.htaccess) is present
+    - bash -lc 'cat > $DEPLOYPATH/.htaccess <<EOF\nPassengerEnabled on\nPassengerNodejs /opt/alt/alt-nodejs18/root/usr/bin/node\nPassengerAppRoot $DEPLOYPATH\nPassengerStartupFile server.js\nPassengerAppEnv production\nPassengerBaseURI /\nEOF'
 
     # Restart Passenger
     - touch $DEPLOYPATH/tmp/restart.txt
